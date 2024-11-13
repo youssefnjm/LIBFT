@@ -18,10 +18,8 @@ void	*ft_calloc(size_t count, size_t size)
 	unsigned char	*p;
 
 	i = 0;
-	if ((long)count < 0 || (long)size < 0)
+	if ((long)count < 0 && (long)size < 0)
 		return (NULL);
-	if ((long)count < 0 || (long)size < 0)
-		return (malloc(0));
 	p = malloc(size * count);
 	if (p == NULL)
 		return (NULL);

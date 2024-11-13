@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_count(int n)
+static	int	ft_count(int n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	ft_count(int n)
 	return (i);
 }
 
-char	*min_int(void)
+static char	*min_int(void)
 {
 	char	*str;
 

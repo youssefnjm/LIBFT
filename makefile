@@ -35,16 +35,16 @@ CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
 
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJ) libft.h
+all: $(NAME)
+
+$(NAME): $(OBJ) 
 	ar rcs $(NAME) $(OBJ)
 
-bonus: $(NAME) $(BONUS_OBJ)
+bonus: $(BONUS_OBJ)
 	ar rcs $(NAME) $(BONUS_OBJ)
-
-all: $(NAME)
 
 clean:
 	rm -f $(OBJ) $(BONUS_OBJ)
@@ -54,4 +54,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re bonus
+.PHONY: clean

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	in(char const *set, char s1)
+static	int	in(char const *set, char s1)
 {
 	while (*set && s1 != *set)
 		set++;
